@@ -20,7 +20,6 @@ idx = 0
 for contour in contours:
 	(x,y,w,h) = cv2.boundingRect(contour)
 	cv2.rectangle(gaus, (x,y), (x+w, y+h), (0, 255, 0), 2)
-	x,y,w,h = cv2.boundingRect(contour) 
 	if w>50 and h>50: 
 		idx+=1 
 		new_img=gaus[y:y+h,x:x+w] 
